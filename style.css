@@ -11,15 +11,15 @@ nav{
   position: fixed ;
   display: flex;
   background-color: rgb(103, 41, 175);
-  height: 30px;
+  height: 2vw;
   top: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
   border-radius: 0 0 50px 50px;
   box-shadow: 0 15px 10px -10px rgba(255, 255, 255, 0.63);
   transition: top .5s ease-in-out;
 }
 nav a{
+  font-size: 1.3vw;
  text-shadow: 4px 4px 3px black;
  margin: auto;
  display: inline-flex;
@@ -47,6 +47,12 @@ nav a:hover{
   font-weight: 500;
 }
 section{
+  margin:auto;background:rgb(14, 0, 27);display:block;z-index:-999;position:absolute"width="1920" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 1920 1080;
+  background-image: url("assets/bg.animation.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin: auto;
   height: 100vh;
   display: flex;
   justify-content: center;
