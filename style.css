@@ -16,7 +16,7 @@ nav{
   left: 0;
   right: 0;
   border-radius: 0 0 50px 50px;
-  box-shadow: 0 15px 5px -10px rgba(16, 15, 17, 0.63);
+  box-shadow: 0 15px 10px -10px rgba(255, 255, 255, 0.63);
   transition: top .5s ease-in-out;
 }
 nav a{
@@ -51,26 +51,63 @@ section{
   display: flex;
   justify-content: center;
 }
-.bg-animation {
+section img .bg-animation {
   position: absolute;
   z-index: -999;
   height: 100vh;
-
 }
+.astronot {
+  width: 200px;
+  position: absolute;
+}
+
 section .hero img{
   margin-top: 20vh;
-  width: 250px;
+  width: 250px ;
   border-radius: 50%;
   justify-content: center;
-  box-shadow: 0 0 20px 4px rgba(255, 255, 255, 0.692), 0 40px 30px -20px rgba(0, 0, 0, 0.623);
-  
+  box-shadow: 0 0 50px 1px rgba(153, 0, 255, 0.384), 0 30px 30px -20px rgba(255, 255, 255, 0.788) ;
+}
+section .hero img:hover{
+  box-shadow: 0 0 50px 10px rgba(153, 0, 255, 0.384), 0 30px 30px -20px rgba(255, 255, 255, 0.788) ;
+  transform: ;
 }
 .hero {
-
 }
 .name {
   font-size: 4em;
   top: calc(25vh + 250px) ;
   position: absolute;
   text-align: center;
+  color: azure;
+}
+.lock-botton{
+  height: 48px;
+  width: 30px;
+  border-radius: 15px;
+  background: transparent;
+  border: 2px solid rgb(44, 0, 165);
+  position: absolute;
+  z-index: 2;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+.center-lock{
+  position: absolute;
+  bottom: 11px;
+  height: 10px;
+  width: 3px;
+  background-color: rgb(44, 0, 165);
+  border-radius: 20px;
+  transition: 100ms;
+} 
+.lock-botton:hover {
+  border-color: rgb(142, 0, 207);
+}
+.lock-botton:hover .center-lock{
+  background-color: blueviolet;
+  transform: translateY(-15px);
 }
