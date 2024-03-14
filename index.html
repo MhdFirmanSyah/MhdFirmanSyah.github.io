@@ -9,22 +9,61 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="scroll(0, 0)">
+    <!-- <img class="loading" src="assets/planet.svg"> -->
     <!-- navbar -->
-    <nav onclick="toggleScrool(true)">
-        <a href="#about-me" >About Me</a>
-        <a href="">My Project</a>
-        <a href="">Portfolio</a>
-        <a href="">Contact Me</a>
+    <nav class="big" onclick="toggleScrool(true)">
+
+        <main>
+        <div class="listnavbar navbar bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Firman</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Mhd FirmanSyah</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">About me</a>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">My Project</a>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Portfolio</a>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Contact Me</a>
+                </div>
+              </div>
+            </div>
+        </div>
+        </main>
+
+        <a class="bar" href="#about-me" >About Me</a>
+        <a class="bar" href="">My Project</a>
+        <a class="bar" href="">Portfolio</a>
+        <a class="bar" href="">Contact Me</a>
     </nav>
     <!-- akhir navbar -->
     <!-- hero -->
     <section>
         <div class="hero">
             <img class="her" src="assets/super-mario.jpg" alt="">
+            <img class="astronot" src="assets/Rocket.gif" alt="">
         </div>
-        <img class="astronot" src="assets/Rocket.gif" alt="">
-        <h2 class="name">Mhd Firman Syah</h2>
-
+        <div class="name">
+            <h2>Holla!...</h2>
+            <h3>I'm </h3>
+            <h1> Mhd Firman Syah</h2>
+            <h2>A Web Developer</h5>
+            <p>I am a web developer from indonesia and i really like learning new technology which makes my skill improve</p><br>
+            <p>and don't forget ";" :)</p>
+         </div>
 
         <a href="#about-me" class="lock-botton" onclick="toggleScrool(true)">
         <span class="center-lock"></span>

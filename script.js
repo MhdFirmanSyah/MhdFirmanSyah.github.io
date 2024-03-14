@@ -17,4 +17,10 @@ function toggleScrool(enable){
         document.documentElement.style.overflowY = 'hidden';
     }
 }
-m 
+// loading 
+function showLoading() {
+    document.getElementById("loading").style.display = "block";
+}
+function hideLoading() {
+    document.getElementById("loading").style.display = "none";
+}
