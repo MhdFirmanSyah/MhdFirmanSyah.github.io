@@ -67,10 +67,6 @@ section img .bg-animation {
   z-index: -999;
   height: 100vh;
 }
-.astronot {
-  width: 200px;
-  position: absolute;
-}
 
 section .hero img{
   margin-top: 26vh;
