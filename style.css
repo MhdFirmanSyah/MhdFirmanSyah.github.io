@@ -58,10 +58,82 @@ section{
   margin: auto;
   height: 100vh;
   display: flex;
-  position: fixed;
+  /* position: fixed; */
   justify-content: center;
+
+}
+.animation .tech img{
+  width: 110px;
+  display: block;
+  position: absolute;
+  top: 200px;
+}
+.animation .tech :first-child{
+  top: 500px;
+  right: 650px;
+  animation: html 4300ms ease-in-out forwards infinite;
+  transform-style: preserve-3d;
+}
+.animation .tech :nth-child(2){
+  animation: css 5100ms ease-in-out backwards infinite;
+  top: 500px;
+  right: 450px;
   
 }
+.animation .tech :nth-child(3){
+  animation: js 5500ms ease-in-out infinite;
+  top: 300px;
+  right: 550px;
+}
+
+@keyframes html {
+  0%{
+    transform: translateY(0px) rotateX(0deg);
+    box-shadow: 0 -30px 25px -20px rgb(255, 81, 0);
+  }
+  50%{
+    transform: translateY(-20px);
+    opacity: .5;
+    filter:invert(2);
+    box-shadow: 0 -30px 30px -15px rgba(0, 106, 177, 0);
+  }
+  100%{
+    box-shadow: 0 -30px 25px -20px rgb(255, 72, 0);
+    transform: translateY(0px) rotateX(0deg);
+  }
+}
+@keyframes css {
+  0%{
+    transform: translateY(0px) rotateX(0deg);
+    box-shadow: 0 -30px 30px -20px rgb(0, 153, 255);
+  }
+  50%{
+    transform: translateY(-20px);
+    opacity: .5;
+    filter:invert(2);
+    box-shadow: 0 -30px 30px -15px rgba(0, 106, 177, 0);
+  }
+  100%{
+    box-shadow: 0 -30px 30px -20px rgb(0 , 106, 177);
+    transform: translateY(0px) rotateX(0deg);
+  }
+}
+@keyframes js {
+  0%{
+    transform: translateY(0px) rotateX(0deg);
+  }
+  50%{
+    transform: translateY(-20px);
+    opacity: .5;
+    filter:invert(2);
+  }
+  100%{
+    transform: translateY(0px) rotateX(0deg);
+  }
+}
+
+
+
 section img .bg-animation {
   position: absolute;
   z-index: -999;
@@ -77,9 +149,14 @@ section .hero img{
 }
 section .hero img:hover{
   box-shadow: 0 0 50px 10px rgba(153, 0, 255, 0.384), 0 30px 30px -20px rgba(255, 255, 255, 0.788) ;
-  transform: ;
+
 }
 .hero {
+}
+.name p .indo{
+  color: rgba(255, 0, 0, 0.719);
+  text-shadow: 3px 3px 3px rgb(255, 255, 255);
+  font-weight: 500;
 }
 .name {
   display: block;
@@ -136,3 +213,18 @@ section .hero img:hover{
   background-color: blueviolet;
   transform: translateY(-30px);
 }
+
+
+
+@media (max-width: 2030px) {
+  section .hero img{
+    width: 100px;
+  }
+}
+
+
+
+
+
+
+
