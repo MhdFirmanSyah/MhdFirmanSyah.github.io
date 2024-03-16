@@ -7,40 +7,44 @@ body{
   background-color: rgba(78, 75, 75, 0.171);
   height: 2000px;
 }
-nav {
+.offcanvas-body {
+  background-color: rgba(0, 0, 0, 0.438);
+}
+.listnavbar {
+  display: block;
+}
+
+.big-navbar {
   position: fixed ;
-  display: flex;
+  display: none;
   background-color: rgba(151, 59, 255, 0.274);
-  height: 50px;
+  height: 2.5vw;
   top: 0;
   width: 100%;
   border-radius: 0 0 50px 50px;
   box-shadow: 0 15px 10px -10px rgba(255, 255, 255, 0.164);
   transition: top .5s ease-in-out;
 }
-.listnavbar {
-  display: none;
-}
-nav .bar{
-  font-size:28px;
- text-shadow: 4px 4px 3px black;
- margin: auto;
- display: inline-flex;
- justify-content: space-between;
- text-decoration: none;
- color: rgb(255, 255, 255);
- align-items: center;
- margin-top: 0;
- border-radius: 0 0 30px 30px;
- padding: 2px 0px 0px 0px;
- transition:transform 300ms,
+.big-navbar .bar{
+  font-size: 1.3vmax;
+  text-shadow: 4px 4px 3px black;
+  margin: auto;
+  display: inline-flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  align-items: center;
+  margin-top: 0;
+  border-radius: 0 0 30px 30px;
+  padding: 2px 0px 0px 0px;
+  transition:transform 300ms,
   padding 300ms 300ms ,
   background-color 500ms 200ms ease-in-out,  
   color 200ms 500ms, 
   box-shadow 400ms 400ms,
   text-shadow 200ms 500ms ;
 }
-nav .bar:hover{
+.big-navbar .bar:hover{
   color: rgb(133, 47, 233);
   background-color: rgba(226, 226, 226, 0.904);
   padding: 3px 30px 3px 30px;
@@ -50,41 +54,143 @@ nav .bar:hover{
   font-weight: 500;
 }
 section{
-  margin:auto;background:rgb(14, 0, 27);display:block;z-index:-999;position:absolute"width="1920" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 1920 1080;
+  background: rgb(14, 0, 27);
+  z-index: -999;
+  position: absolute"width="1920" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 1920 1080;
   background-image: url("assets/bg.animation.svg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  margin: auto;
   height: 100vh;
   display: flex;
-  /* position: fixed; */
   justify-content: center;
-
+  margin: auto;
+}
+section .hero img{
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  margin-top: 44vh;
+  width: 20vh;
+  border-radius: 50%;
+  box-shadow: 0 0 50px 1px rgba(153, 0, 255, 0.384), 0 30px 30px -20px rgba(255, 255, 255, 0.788) ;
+}
+section .hero img:hover{
+  box-shadow: 0 0 50px 10px rgba(153, 0, 255, 0.384), 0 30px 30px -20px rgba(255, 255, 255, 0.788) ;
+}
+.name {
+  font-size: 2vw;
+  display: block;
+  top: 10vh;
+  left: 8vw;
+  position: absolute;
+  color: white;
+  width: 70vw;
+}
+.name h2{
+  font-size: 3.7em;
+}
+.name h1, h3{
+  font-size: 3.6em;
+  display: inline;
+}
+.name h1{
+  color: salmon;
+}
+.name p{
+ font-size: 2em;
+}
+.name p .indo{
+  color: rgba(255, 0, 0, 0.719);
+  text-shadow: 3px 3px 3px rgb(255, 255, 255);
+  font-weight: 500;
+}
+.name p:last-child {
+  line-height: 1px;
+  
+}  
+.animation .tech{
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  width: 300px;
+  height: 270px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .animation .tech img{
-  width: 110px;
-  display: block;
+  width: 60px;
   position: absolute;
-  top: 200px;
 }
 .animation .tech :first-child{
-  top: 500px;
-  right: 650px;
+  right: 80px;
   animation: html 4300ms ease-in-out forwards infinite;
   transform-style: preserve-3d;
 }
 .animation .tech :nth-child(2){
+  left: 80px;
   animation: css 5100ms ease-in-out backwards infinite;
-  top: 500px;
-  right: 450px;
-  
 }
 .animation .tech :nth-child(3){
+  top: 10px;
   animation: js 5500ms ease-in-out infinite;
-  top: 300px;
-  right: 550px;
 }
+.lock-botton{
+  height: calc(3.4em  );
+  width: calc(2.2em );
+  border-radius: 20px;
+  background: transparent;
+  border: calc(.2em + .05vw) solid rgb(44, 0, 165);
+  position: absolute;
+  z-index: 2;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+.center-lock{
+  position: absolute;
+  bottom: 20%;
+  height: calc(2.5vw);
+  width: calc(1.2vw);
+  background-color: rgb(44, 0, 165);
+  border-radius: 200px;
+  transition: 100ms;
+} 
+.lock-botton:hover {
+  border-color: rgb(142, 0, 207);
+}
+.lock-botton:hover .center-lock{
+  background-color: blueviolet;
+  transform: translateY(-30px);
+}
+
+/* @media (max-width: 425px) {
+  .nav
+}
+
+
+
+
+@media (max-width: 1440px) {
+  nav{
+    height: 30px;
+  }
+  section .hero img{
+    width: 110px;
+  }
+}
+
+ */
+
+
+
 
 @keyframes html {
   0%{
@@ -131,100 +237,3 @@ section{
     transform: translateY(0px) rotateX(0deg);
   }
 }
-
-
-
-section img .bg-animation {
-  position: absolute;
-  z-index: -999;
-  height: 100vh;
-}
-
-section .hero img{
-  margin-top: 26vh;
-  width: 400px ;
-  border-radius: 50%;
-  justify-content: center;
-  box-shadow: 0 0 50px 1px rgba(153, 0, 255, 0.384), 0 30px 30px -20px rgba(255, 255, 255, 0.788) ;
-}
-section .hero img:hover{
-  box-shadow: 0 0 50px 10px rgba(153, 0, 255, 0.384), 0 30px 30px -20px rgba(255, 255, 255, 0.788) ;
-
-}
-.hero {
-}
-.name p .indo{
-  color: rgba(255, 0, 0, 0.719);
-  text-shadow: 3px 3px 3px rgb(255, 255, 255);
-  font-weight: 500;
-}
-.name {
-  display: block;
-  top: 30vh;
-  left: 10vw;
-  position: absolute;
-  color: white;
-  width: 30%;
-}
-.name h2{
-  font-size: 3em;
-}
-.name h1, h3{
-  font-size: 4em;
-  display: inline;
-}
-.name h1{
- color: salmon;
-}
-.name p:last-child {
-  line-height: 1px;
-  
-}  
-.name p{
-  font-size: 30px;
-}
-.lock-botton{
-  height: 90px;
-  width: 60px;
-  border-radius: 30px;
-  background: transparent;
-  border: 4px solid rgb(44, 0, 165);
-  position: absolute;
-  z-index: 2;
-  bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 1s;
-}
-.center-lock{
-  position: absolute;
-  bottom: 20px;
-  height: 15px;
-  width: 5px;
-  background-color: rgb(44, 0, 165);
-  border-radius: 20px;
-  transition: 100ms;
-} 
-.lock-botton:hover {
-  border-color: rgb(142, 0, 207);
-}
-.lock-botton:hover .center-lock{
-  background-color: blueviolet;
-  transform: translateY(-30px);
-}
-
-
-
-@media (max-width: 2030px) {
-  section .hero img{
-    width: 100px;
-  }
-}
-
-
-
-
-
-
-
