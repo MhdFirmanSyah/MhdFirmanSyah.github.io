@@ -17,10 +17,17 @@ function toggleScrool(enable){
         document.documentElement.style.overflowY = 'hidden';
     }
 }
-// loading 
-function showLoading() {
-    document.getElementById("loading").style.display = "block";
+
+//sidebar
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.top ='0'
+    const list = document.querySelector('.list')
+    list.style.top ='-90px'
 }
-function hideLoading() {
-    document.getElementById("loading").style.display = "none";
+function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.top ='-1900px'
+    const list = document.querySelector('.list')
+    list.style.top ='0'
 }

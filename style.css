@@ -7,26 +7,93 @@ body{
   background-color: rgba(78, 75, 75, 0.171);
   height: 2000px;
 }
-.offcanvas-body {
-  background-color: rgba(0, 0, 0, 0.438);
+nav{
+  font-size: calc(13px) ;
 }
-.listnavbar {
+.sidebar {
+  border-radius: 0 0 0 20px;
+  position: fixed;
+  top: -1900px;/*-1900px*/
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: #00000049;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  font-size: 1.5em;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+  transition: 1s ease-in-out;
+}
+.sidebar li a{
+  text-shadow: 3px 2px 3px rgb(236, 35, 35);
+  text-decoration: none;
+  color: rgb(255, 240, 212);
+  font-weight: 700;
+  transition: 300ms;
+}
+.sidebar li a:hover{
+  color: #ffffff;
+  text-shadow: -3px -2px 3px rgb(137, 47, 255);
+  font-style:oblique;
+}
+.list {
+  top: 0;
   display: block;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.664);
+  backdrop-filter: blur(3px);
+  border-radius: 0 0 0 50px;
+  background-color: #00000048;
+  right: 0;
+  width: calc(20px + 2vw);
+  position: absolute;
+  z-index: 1;
+  transition: 800ms;
 }
-
-.big-navbar {
-  position: fixed ;
-  display: none;
+.list:hover{
+  transform: scale(1.2);
+}
+.close {
+  position: absolute;
+  width: 40px;
+  right: 0;
+  transition: 10s;
+}
+.close:hover{
+  transform: rotate(500deg);
+}
+.sidebar ul li a{
+  width: 100%;
+}
+.sidebar li{
+  width: 100%;
+  text-decoration: none;
+  display: block;
+  padding: 40px;
+  font-size: 1em;
+}
+.navMobile p{
+  position: absolute;
+  color: aliceblue;
+  margin: 2px 6px;
+}
+.navDesktop{
+  position: fixed;
+  display: none; /*flex */
   background-color: rgba(151, 59, 255, 0.274);
-  height: 2.5vw;
   top: 0;
   width: 100%;
   border-radius: 0 0 50px 50px;
   box-shadow: 0 15px 10px -10px rgba(255, 255, 255, 0.164);
   transition: top .5s ease-in-out;
+  height: calc(.5em + 1.5vw);
 }
-.big-navbar .bar{
-  font-size: 1.3vmax;
+.navDesktop .bar{
+  font-size: calc(.1em + .9vw);
   text-shadow: 4px 4px 3px black;
   margin: auto;
   display: inline-flex;
@@ -44,7 +111,7 @@ body{
   box-shadow 400ms 400ms,
   text-shadow 200ms 500ms ;
 }
-.big-navbar .bar:hover{
+.navDesktop .bar:hover{
   color: rgb(133, 47, 233);
   background-color: rgba(226, 226, 226, 0.904);
   padding: 3px 30px 3px 30px;
@@ -67,6 +134,8 @@ section{
   margin: auto;
 }
 section .hero img{
+  display: block;
+  z-index:1;
   position: absolute;
   margin: auto;
   left: 0;
@@ -80,26 +149,28 @@ section .hero img:hover{
   box-shadow: 0 0 50px 10px rgba(153, 0, 255, 0.384), 0 30px 30px -20px rgba(255, 255, 255, 0.788) ;
 }
 .name {
-  font-size: 2vw;
+  font-size: calc(12px + 1vw);
   display: block;
-  top: 10vh;
+  top: calc(4em + 3vw);
   left: 8vw;
   position: absolute;
   color: white;
-  width: 70vw;
+  width: calc(17em + 5vw);  
 }
 .name h2{
-  font-size: 3.7em;
+  font-size: 1.5em;
 }
 .name h1, h3{
-  font-size: 3.6em;
+  font-size: 1.7em;
   display: inline;
 }
 .name h1{
   color: salmon;
+  position: absolute;
+  animation: glitch-text 2s alternate-reverse infinite;
 }
 .name p{
- font-size: 2em;
+ font-size: .7em;
 }
 .name p .indo{
   color: rgba(255, 0, 0, 0.719);
@@ -108,10 +179,9 @@ section .hero img:hover{
 }
 .name p:last-child {
   line-height: 1px;
-  
 }  
 .animation .tech{
-  bottom: 50px;
+  bottom: calc(-50px + 1vh);
   left: 0;
   right: 0;
   margin: auto;
@@ -124,31 +194,32 @@ section .hero img:hover{
   align-items: center;
 }
 .animation .tech img{
-  width: 60px;
+  transform: scale(45deg);
+  width: calc(35px + 2vw);
   position: absolute;
 }
 .animation .tech :first-child{
-  right: 80px;
+  right: calc(100px - 2vw);
   animation: html 4300ms ease-in-out forwards infinite;
   transform-style: preserve-3d;
 }
 .animation .tech :nth-child(2){
-  left: 80px;
+  left: calc(100px - 2vw);
   animation: css 5100ms ease-in-out backwards infinite;
 }
 .animation .tech :nth-child(3){
-  top: 10px;
+  top: calc(50px - 5vw);
   animation: js 5500ms ease-in-out infinite;
 }
 .lock-botton{
-  height: calc(3.4em  );
-  width: calc(2.2em );
-  border-radius: 20px;
+  height: calc(33px + 1.5vw);
+  width: calc(20px + .9vw);
+  border-radius: 40px;
   background: transparent;
-  border: calc(.2em + .05vw) solid rgb(44, 0, 165);
+  border: calc(2px + .07vw) solid rgb(44, 0, 165);
   position: absolute;
   z-index: 2;
-  bottom: 20px;
+  bottom: calc(1.5em + 1vw);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,8 +228,8 @@ section .hero img:hover{
 .center-lock{
   position: absolute;
   bottom: 20%;
-  height: calc(2.5vw);
-  width: calc(1.2vw);
+  height: calc(7px + .3vw);
+  width: calc(2.7px + .1vw);
   background-color: rgb(44, 0, 165);
   border-radius: 200px;
   transition: 100ms;
@@ -168,29 +239,43 @@ section .hero img:hover{
 }
 .lock-botton:hover .center-lock{
   background-color: blueviolet;
-  transform: translateY(-30px);
+  transform: translateY(-250%);
 }
-
-/* @media (max-width: 425px) {
-  .nav
-}
-
-
-
-
-@media (max-width: 1440px) {
-  nav{
-    height: 30px;
+@media (max-height: 570px) {
+  .animation .tech {
+    display: none;
   }
+}
+@media (min-width:551px){
+section .hero img{
+  width: calc(6em + 5vw);
+  right: calc(2em + 10vw);
+  left: auto;
+  margin-top: 20vh;
+}
+.animation .tech{
+  bottom: 2em;
+}
+}
+
+@media (min-width: 768px) {
   section .hero img{
-    width: 110px;
+  width: calc(7em + 7vw);
+  right: calc(.1em  + 18vw);
+    
   }
+  .navDesktop{
+  display: flex;
+  }
+  .list{
+    display: none;
+  }
+.animation .tech{
+  left: auto;
+  right: calc(1.7em + 2vw);
+
 }
-
- */
-
-
-
+}
 
 @keyframes html {
   0%{
@@ -235,5 +320,43 @@ section .hero img:hover{
   }
   100%{
     transform: translateY(0px) rotateX(0deg);
+  }
+}
+
+@keyframes glitch-text {
+  0% {
+    transform: translateX(0);
+    text-shadow: 0 0 10px #ffffff;
+    opacity: 0;
+  }
+  2% {
+    transform: translateX(-2px) skewX(-2deg);
+    text-shadow: 0 0 5px #000000;
+    opacity: 0;
+
+  }
+  4% {
+    transform: translateX(2px) skewX(2deg);
+    text-shadow: 10px 0 10px #ffffff;
+    opacity: 1;
+    
+  }
+  6% {
+    transform: translateX(-4px) skewX(-4deg);
+    text-shadow: 0 0 10px #050505;
+    opacity: 0;
+    
+  }
+  8% {
+    opacity: 1;
+    transform: translateX(4px) skewX(4deg);
+    text-shadow: 10px 0 15px #e4e8ff;
+    
+  }
+  10% {
+    opacity: 0;
+    transform: translateX(0);
+    text-shadow: 0 0 0 #000000;
+
   }
 }
