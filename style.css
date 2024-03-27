@@ -38,9 +38,12 @@ nav{
   text-decoration: none;
   color: rgb(255, 240, 212);
   font-weight: 700;
-  transition: 300ms;
+  transition: 300ms;  
+  text-underline-position: above;
 }
 .sidebar li a:hover{
+
+  text-decoration: underline;
   color: #ffffff;
   text-shadow: -3px -2px 3px rgb(137, 47, 255);
   font-style:oblique;
@@ -81,9 +84,11 @@ nav{
   font-size: 1em;
 }
 .navMobile p{
+  text-shadow: -2px -2px 5px black;
   position: absolute;
-  color: aliceblue;
+  color: rgb(202, 199, 235);
   margin: 2px 6px;
+  font-family: rascon;
 }
 .navDesktop{
   position: fixed;
@@ -94,10 +99,10 @@ nav{
   border-radius: 0 0 50px 50px;
   box-shadow: 0 15px 10px -10px rgba(255, 255, 255, 0.164);
   transition: top .5s ease-in-out;
-  height: calc(.5em + 1.5vw);
+  /* height: calc(.5em + 1.5vw); */
 }
 .navDesktop .bar{
-  font-size: calc(.1em + .9vw);
+  /* font-size: calc(.1em + .9vw); */
   text-shadow: 4px 4px 3px black;
   margin: auto;
   display: inline-flex;
@@ -166,9 +171,6 @@ section{
   font-size: 1.7em;
   display: inline;
 } */
-.top{
-  font-family: rascon;
-}
 .name .anim{
   color: salmon;
   position: absolute;
@@ -216,7 +218,8 @@ section{
   top: calc(50px - 5vw);
   animation: js 5500ms ease-in-out infinite;
 }
-.lock-botton{
+.lock-botton{ 
+  box-shadow: 0 10px 20px  -8px rgba(225, 253, 253, 0.69);
   height: calc(33px + 1.5vw);
   width: calc(20px + .9vw);
   border-radius: 40px;
@@ -231,6 +234,8 @@ section{
   transition: 1s;
 }
 .center-lock{
+  box-shadow: 0 0 10px  rgb(213, 245, 249);
+ 
   position: absolute;
   bottom: 20%;
   height: calc(7px + .3vw);
@@ -240,6 +245,7 @@ section{
   transition: 100ms;
 } 
 .lock-botton:hover {
+  
   border-color: rgb(142, 0, 207);
 }
 .lock-botton:hover .center-lock{
