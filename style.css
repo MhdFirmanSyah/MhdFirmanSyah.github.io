@@ -3,8 +3,8 @@
   padding: 0;
 }
 body{
+  background-color: #aea6c2f7;
   overflow-x: hidden;
-  background-color: rgba(78, 75, 75, 0.171);
   height: 2000px;
 }
 nav{
@@ -16,7 +16,7 @@ nav{
 }
 .sidebar {
   border-radius: 0 0 0 20px;
-  position: fixed;
+  position: absolute;
   top: -1900px;/*-1900px*/
   right: 0;
   height: 100vh;
@@ -85,10 +85,15 @@ nav{
 }
 .navMobile p{
   text-shadow: -2px -2px 5px black;
-  position: absolute;
+  position: fixed;
   color: rgb(202, 199, 235);
   margin: 2px 6px;
   font-family: rascon;
+}
+.navMobile p :hover{
+  text-shadow: 0 0 5px rgb(33, 25, 107);
+  text-underline-position:above;
+  /* text-decoration: underline; */
 }
 .navDesktop{
   position: fixed;
@@ -129,9 +134,9 @@ nav{
   transform: translateY(-3px);
   font-weight: 500;
 }
-section{
+.back{
   background: rgb(14, 0, 27);
-  z-index: -999;
+  z-index: -9999999;
   position: absolute"width="1920" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 1920 1080;
   background-image: url("assets/bg.animation.svg");
   background-repeat: no-repeat;

@@ -31,3 +31,29 @@ function hideSidebar(){
     const list = document.querySelector('.list')
     list.style.top ='0'
 }
+
+
+//nihtmode
+
+const toggle = document.getElementById('darkModeToggle')
+
+
+// toggle.addEventListener('change', (e) => {
+//   document.documentElement.classList.toggle('dark', e.target.checked);
+// });
+
+toggle.addEventListener('change', (e) => {
+document.documentElement.classList.toggle('dark', e.target.checked);
+
+if (e.target.checked) {
+localStorage.setItem('darkMode', 'true');
+} else {
+localStorage.removeItem('darkMode');
+}
+});
+
+// Cek apakah 'darkMode' ada di localStorage ketika halaman dimuat
+if (localStorage.getItem('darkMode')) {
+toggle.checked = true;
+document.documentElement.classList.add('dark');
+}
