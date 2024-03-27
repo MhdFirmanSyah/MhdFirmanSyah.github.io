@@ -10,6 +10,10 @@ body{
 nav{
   font-size: calc(13px) ;
 }
+@font-face {
+  font-family:"rascon" ;
+  src: url(font/Rascon.woff);
+}
 .sidebar {
   border-radius: 0 0 0 20px;
   position: fixed;
@@ -133,7 +137,7 @@ section{
   justify-content: center;
   margin: auto;
 }
-section .hero img{
+/* section .hero img{
   display: block;
   z-index:1;
   position: absolute;
@@ -141,45 +145,46 @@ section .hero img{
   left: 0;
   right: 0;
   margin-top: 44vh;
-  width: 20vh;
-  border-radius: 50%;
-  box-shadow: 0 0 50px 1px rgba(153, 0, 255, 0.384), 0 30px 30px -20px rgba(255, 255, 255, 0.788) ;
-}
-section .hero img:hover{
-  box-shadow: 0 0 50px 10px rgba(153, 0, 255, 0.384), 0 30px 30px -20px rgba(255, 255, 255, 0.788) ;
-}
-.name {
+  width: 30vh;
+} */
+
+/* .name {
   font-size: calc(12px + 1vw);
   display: block;
   top: calc(4em + 3vw);
   left: 8vw;
   position: absolute;
   color: white;
-  width: calc(17em + 5vw);  
 }
 .name h2{
   font-size: 1.5em;
 }
+.name h3{
+  font-size: 1.6em;
+}
 .name h1, h3{
   font-size: 1.7em;
   display: inline;
+} */
+.top{
+  font-family: rascon;
 }
-.name h1{
+.name .anim{
   color: salmon;
   position: absolute;
   animation: glitch-text 2s alternate-reverse infinite;
 }
-.name p{
- font-size: .7em;
-}
+/* .name p{
+ font-size: .8em;
+} */
 .name p .indo{
   color: rgba(255, 0, 0, 0.719);
   text-shadow: 3px 3px 3px rgb(255, 255, 255);
   font-weight: 500;
 }
-.name p:last-child {
+/* .name p:last-child {
   line-height: 1px;
-}  
+}   */
 .animation .tech{
   bottom: calc(-50px + 1vh);
   left: 0;
@@ -216,7 +221,7 @@ section .hero img:hover{
   width: calc(20px + .9vw);
   border-radius: 40px;
   background: transparent;
-  border: calc(2px + .07vw) solid rgb(44, 0, 165);
+  border: calc(3px + .07vw) solid rgb(44, 0, 165);
   position: absolute;
   z-index: 2;
   bottom: calc(1.5em + 1vw);
@@ -241,15 +246,15 @@ section .hero img:hover{
   background-color: blueviolet;
   transform: translateY(-250%);
 }
-@media (max-height: 570px) {
+/* @media (max-height: 570px) {
   .animation .tech {
     display: none;
   }
 }
 @media (min-width:551px){
 section .hero img{
-  width: calc(6em + 5vw);
-  right: calc(2em + 10vw);
+  width: calc(7em + 10vw);
+  right: calc(1em + 10vw);
   left: auto;
   margin-top: 20vh;
 }
@@ -260,7 +265,7 @@ section .hero img{
 
 @media (min-width: 768px) {
   section .hero img{
-  width: calc(7em + 7vw);
+  width: calc(10em + 10vw);
   right: calc(.1em  + 18vw);
     
   }
@@ -275,7 +280,7 @@ section .hero img{
   right: calc(1.7em + 2vw);
 
 }
-}
+} */
 
 @keyframes html {
   0%{
