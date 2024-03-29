@@ -8,7 +8,7 @@ window.onscroll = function(){
 
 // scroll lock
 document.documentElement.style.overflowX = 'hidden';
-// document.documentElement.style.overflowY = 'hidden';
+document.documentElement.style.overflowY = 'hidden';
 function toggleScrool(enable){
     if (enable) {
         document.documentElement.style.overflowY = 'auto';
