@@ -3,7 +3,9 @@
   padding: 0;
 }
 body{
-  background-color: #aea6c2f7;
+  font-family: aileron;
+  color:white;
+  background-color: rgb(14, 0, 27);
   overflow-x: hidden;
   height: 2000px;
 }
@@ -11,8 +13,23 @@ nav{
   font-size: calc(13px) ;
 }
 @font-face {
+  font-family: "aileron";
+  src: url(font/Aileron-Regular.woff);
+}
+@font-face {
+  font-family: "aileron-bold";
+  src: url(font/Aileron-Bold.woff);
+}
+@font-face {
+  font-family: "aileron-semibold";
+  src: url(font/Aileron-SemiBold.woff);
+}
+@font-face {
   font-family:"rascon" ;
   src: url(font/Rascon.woff);
+}
+.who{
+  font-family: rascon;
 }
 .sidebar {
   border-radius: 0 0 0 20px;
@@ -53,12 +70,12 @@ nav{
   display: block;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.664);
   backdrop-filter: blur(3px);
-  border-radius: 0 0 0 50px;
+  border-radius: 0 0 0 25px;
   background-color: #00000048;
   right: 0;
   width: calc(20px + 2vw);
   position: absolute;
-  z-index: 1;
+  z-index: 21;
   transition: 800ms;
 }
 .list:hover{
@@ -84,10 +101,10 @@ nav{
   font-size: 1em;
 }
 .navMobile p{
+  background-color: #00000048;
   text-shadow: -2px -2px 5px black;
   position: fixed;
   color: rgb(202, 199, 235);
-  margin: 2px 6px;
   font-family: rascon;
 }
 .navMobile p :hover{
@@ -96,11 +113,13 @@ nav{
   /* text-decoration: underline; */
 }
 .navDesktop{
+  z-index: 21;
   position: fixed;
   display: none; /*flex */
   background-color: rgba(151, 59, 255, 0.274);
   top: 0;
   width: 100%;
+  
   border-radius: 0 0 50px 50px;
   box-shadow: 0 15px 10px -10px rgba(255, 255, 255, 0.164);
   transition: top .5s ease-in-out;
@@ -108,12 +127,14 @@ nav{
 }
 .navDesktop .bar{
   /* font-size: calc(.1em + .9vw); */
+  font-family: rascon;
+  font-size: medium;
   text-shadow: 4px 4px 3px black;
   margin: auto;
   display: inline-flex;
   justify-content: space-between;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgba(231, 230, 246, 0.872);
   align-items: center;
   margin-top: 0;
   border-radius: 0 0 30px 30px;
@@ -223,6 +244,8 @@ nav{
   top: calc(50px - 5vw);
   animation: js 5500ms ease-in-out infinite;
 }
+
+
 .lock-botton{ 
   box-shadow: 0 10px 20px  -8px rgba(225, 253, 253, 0.69);
   height: calc(33px + 1.5vw);

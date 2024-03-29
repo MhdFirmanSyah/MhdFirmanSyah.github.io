@@ -27,7 +27,7 @@
 <main class="overflow-none relative">
     <nav class="big "  >
                                                               
-        <div class="navDesktop hidden md:flex h-7 text-md " onclick="toggleScrool(true)">
+        <div class="navDesktop hidden md:flex h-7 backdrop-blur-[2px]" onclick="toggleScrool(true)">
             <a class="bar" href="#about-me" >About Me</a>
             <a class="bar" href="">My Project</a>
             <a class="bar" href="">Portfolio</a>
@@ -35,7 +35,7 @@
         </div>
         <div class="navMobile md:hidden">
            <img onclick="showSidebar()" class="list fixed" src="assets/list.svg" alt="">
-            <p class="top text-xl text-purple-400 opacity-90 md:hidden p-[1vw] fixed hover:text-purple-500 transition"><a href="#">Firman</a></p>
+            <p class="top z-20 text-xl text-purple-400 opacity-90 md:hidden  fixed hover:text-purple-500 transition backdrop-blur-sm pt-1.5 px-3 m-0 pb-0.5 rounded-br-3xl"><a href="#">Firman</a></p>
             <ul class="sidebar fixed" onclick="hideSidebar()" onclick="toggleScrool(true)">
                 <img onclick="hideSidebar()" src="assets/close.svg" alt="" class="close">
                 <li><a class="bar " href="#about-me" >About Me</a></li>
@@ -63,26 +63,36 @@
         <a href="#about-me" class="z-20 lock-botton animate-bounce duration-1000" onclick="toggleScrool(true)">
         <span class="center-lock"></span>
         </a>
-</main>
-        <!-- <div class="animation">
-            <div class="tech">
-                <img src="assets/html.svg" alt="">
-                <img src="assets/css.svg" alt="">
-                <img src="assets/javascript.svg" alt="">
-                <img src="assets/" alt="">
-            </div>
-        </div> -->
-
+        
+    </main>
+    <!-- <div class="animation">
+        <div class="tech">
+            <img src="assets/html.svg" alt="">
+            <img src="assets/css.svg" alt="">
+            <img src="assets/javascript.svg" alt="">
+            <img src="assets/" alt="">
+        </div>
+    </div> -->
+    
     <!-- akhir hero -->
     <!-- content-->
+    <div id="about-me">
     
         <!-- <main class="mt-7"> -->
-            <h1 class="text-3xl font-bold text-center
-             mb-4 font-serif text-slate-950 m-10">ABOUT ME</h1>
-            <section class="bg-slate-800/20 container max-w-6xl mx-auto mt-10 p-10  shadow-md shadow-black rounded-3xl text-xl">
-                <p class="font-medium text-slate-900 font-serif first-line:tracking-widest"><span class="text-5xl float-left mr-4 ">Hello,</span> My name is     <span class="font-semibold underline"> Muhammad Firmansyah,</span> I am from Riau, Indonesia. I am a curious and results-oriented junior web developer with a passion for creating great web experiences. Even though I am still in the early stages of my web development journey, I have a solid foundation in the core concepts and I am committed to continuously learning and improving my skills. I believe that with hard work, dedication, and guidance from experienced mentors, I can become a successful web developer.</p>
+            <h1 class="who text-4xl font-thin text-center
+             mb-4 pt-16  text-slate-200 m-10">WHO I AM</h1>
+            <section class=" container max-w-4xl mx-auto mt-10 p-10 text-lg md:text-xl shadow-2xl rounded-xl shadow-black">
+                <p class="text-justify  first-line:tracking-widest">
+                    <span class="text-5xl float-left mr-4 font-bold">Hello,</span>My name is <span class="font-semibold underline">Muhammad Firmansyah,</span> 
+                    I am from Riau,    Indonesia. I am 15 years old and currently a high school student. In addition to my studies, I am a tech enthusiast who enjoys keeping up with the latest technological developments such as computers, hardware, the Internet of Things (IoT), gadgets, and even Artificial Intelligence (AI).<br><br>
+                    <img src="assets/astronotandrocket.svg" alt="" class="atro absolute invisible animate-bounce md:float-right md:visible md:relative w-52 duration-75 animate-pulse">
+                    My interest in web development began early in my life, and I have invested countless hours in learning and honing my skills in this domain. Although I am still at the beginning of my journey in web development, I am determined to continue improving my knowledge and expertise. Through commitment, guidance from established professionals, and practising various programming languages, I have many reasons to believe that success is within reach. My keen interest in technology and web development, combined with my diligent dedication to absorb all that I can, gives me hope for what lies ahead.</p>
             </section>
         <!-- </main> -->
+
+
+
+        
 
 
 <script src="script.js"></script>
