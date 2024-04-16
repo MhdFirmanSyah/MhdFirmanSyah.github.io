@@ -33,7 +33,7 @@ function hideSidebar(){
 }
 
 
-//nihtmode
+//nightmode
 
 const toggle = document.getElementById('darkModeToggle')
 
@@ -57,3 +57,22 @@ if (localStorage.getItem('darkMode')) {
 toggle.checked = true;
 document.documentElement.classList.add('dark');
 }
+
+
+// Import the ScrollReveal library
+import ScrollReveal from 'scrollreveal';
+
+// Create a ScrollReveal object
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '20px',
+  duration: 500,
+  reset: true
+});
+
+// Add elements to be animated to the ScrollReveal object
+sr.reveal('.top', {
+  origin: 'left',
+  distance: '50px',
+  duration: 1000
+});
