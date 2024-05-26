@@ -1,16 +1,25 @@
 *{
+  transition: all 1s;
   margin: 0;
   padding: 0;
+  animation: 1s ease-in-out;
+}
+html{
+  height: 4000px;
 }
 body{
   font-family: aileron;
   color:white;
-  background-color: rgb(14, 0, 27);
+  background: linear-gradient(rgba(14,0,27,1), rgb(20, 7, 32) );
+  /* background-color: rgb(14, 0, 27); */
   overflow-x: hidden;
-  height: 2000px;
+  height: 5000px;
+  animation: 1s ease-in-out;
 }
 nav{
   font-size: calc(13px) ;
+  animation: 1s ease-in-out;
+
 }
 @font-face {
   font-family: "aileron";
@@ -28,8 +37,16 @@ nav{
   font-family:"rascon" ;
   src: url(font/Rascon.woff);
 }
-.who{
+.judul{
+  top: 10px;
+  /* position: sticky; */
   font-family: rascon;
+}
+.fix{
+  position: fixed;
+  display: flex;
+  inset: 0;
+  justify-content: center;
 }
 .sidebar {
   border-radius: 0 0 0 20px;
@@ -48,7 +65,28 @@ nav{
   text-decoration: none;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 20px rgb(0, 0, 0);
+  transition: 500ms ease-in-out;
+  animation: 3s ease-in-out;
+}
+.sidebar li {
   transition: 1s ease-in-out;
+  margin: 20px 0;
+  margin-top: 50px;
+}
+.sidebar li:hover {
+  transform: scale(1.1);
+  transform:  translateY(-5px);
+}
+.sidebar li a::after{
+  content: '';
+  display: block;
+  border-bottom: .1rem solid rgb(190, 201, 221);
+  transform: scale(0);
+  transition: 500ms linear;
+}
+.sidebar li a:hover::after{
+  transform: scale(1);
+  transform-origin: center;
 }
 .sidebar li a{
   text-shadow: 3px 2px 3px rgb(236, 35, 35);
@@ -59,11 +97,10 @@ nav{
   text-underline-position: above;
 }
 .sidebar li a:hover{
-
-  text-decoration: underline;
   color: #ffffff;
   text-shadow: -3px -2px 3px rgb(137, 47, 255);
-  font-style:oblique;
+  /* font-style:oblique; */
+
 }
 .list {
   top: 0;
@@ -93,13 +130,6 @@ nav{
 .sidebar ul li a{
   width: 100%;
 }
-.sidebar li{
-  width: 100%;
-  text-decoration: none;
-  display: block;
-  padding: 40px;
-  font-size: 1em;
-}
 .navMobile p{
   background-color: #00000048;
   text-shadow: -2px -2px 5px black;
@@ -119,20 +149,21 @@ nav{
   background-color: rgba(151, 59, 255, 0.274);
   top: 0;
   width: 100%;
-  
+  /* justify-content: space-around; */
   border-radius: 0 0 50px 50px;
   box-shadow: 0 15px 10px -10px rgba(255, 255, 255, 0.164);
-  transition: top .5s ease-in-out;
+  transition: top .5s ease-in-out, all 1s;
   /* height: calc(.5em + 1.5vw); */
 }
 .navDesktop .bar{
+  /* position: fixed; */
   /* font-size: calc(.1em + .9vw); */
   font-family: rascon;
   font-size: medium;
   text-shadow: 4px 4px 3px black;
   margin: auto;
-  display: inline-flex;
-  justify-content: space-between;
+  display:block;
+  justify-content:center;
   text-decoration: none;
   color: rgba(231, 230, 246, 0.872);
   align-items: center;
@@ -155,18 +186,23 @@ nav{
   transform: translateY(-3px);
   font-weight: 500;
 }
-.back{
+.background{
   background: rgb(14, 0, 27);
   z-index: -9999999;
   position: absolute"width="1920" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 1920 1080;
   background-image: url("assets/bg.animation.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   margin: auto;
+  mask-image: linear-gradient(rgba(0, 0, 0, 1) 68%, rgba(0, 0, 0, 0));
+  -webkit-mask-image: linear-gradient(rgb(66, 0, 208, 1) 68%, rgba(0, 0, 0, 0));
+  /* position: fixed; */
 }
 /* section .hero img{
   display: block;
@@ -254,7 +290,7 @@ nav{
   background: transparent;
   border: calc(3px + .07vw) solid rgb(44, 0, 165);
   position: absolute;
-  z-index: 2;
+  z-index: 9999;
   bottom: calc(1.5em + 1vw);
   display: flex;
   justify-content: center;
@@ -263,7 +299,7 @@ nav{
 }
 .center-lock{
   box-shadow: 0 0 10px  rgb(213, 245, 249);
- 
+  z-index: 9999;
   position: absolute;
   bottom: 20%;
   height: calc(7px + .3vw);
@@ -280,6 +316,19 @@ nav{
   background-color: blueviolet;
   transform: translateY(-250%);
 }
+
+.skills div label{
+  /* font-size: 15px; */
+  text-align: center;
+  font-family: rascon;
+  color: rgb(201, 204, 245);
+  margin-top: 1rem;
+  text-shadow: 0 0 3px black;
+}
+
+/* project start */
+
+/* project end */
 /* @media (max-height: 570px) {
   .animation .tech {
     display: none;

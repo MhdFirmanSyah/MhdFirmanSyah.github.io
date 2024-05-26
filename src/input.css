@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    .project-card{
+        @apply cursor-pointer rounded-xl shadow-sm shadow-gray-600 mb-6 xl:w-96 lg:w-72 md:w-80 sm:w-60 mx-auto hover:scale-110 transition-all hover:bg-slate-800
+    }
+    .icon-technology{
+        @apply  text-xs lg:text-lg hover:-translate-y-1 transition-all hover:text-purple-300
+    }
+    .icon-technology-img{
+        @apply mx-auto xl:size-28 lg:size-24 md:size-20 sm:size-16 size-12 group-hover:scale-110 group-hover:-translate-y-3
+    }
+}
