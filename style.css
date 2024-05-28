@@ -1,3 +1,8 @@
+:root{
+  --purple1: #0E001B;
+  --purple2: #3f0092;
+  --purple3: #ae00ff;
+}
 *{
   transition: all 1s;
   margin: 0;
@@ -5,16 +10,19 @@
   animation: 1s ease-in-out;
 }
 html{
-  height: 4000px;
+  /* height: 4000px; */
 }
 body{
   font-family: aileron;
   color:white;
-  background: linear-gradient(rgba(14,0,27,1), rgb(20, 7, 32) );
-  /* background-color: rgb(14, 0, 27); */
+  /* background: linear-gradient(rgba(14,0,27,1), rgb(20, 7, 32) ); */
+  background-color: rgb(14, 0, 27);
   overflow-x: hidden;
-  height: 5000px;
+  /* height: 5000px; */
   animation: 1s ease-in-out;
+}
+#loading{
+  z-index: 99999999;
 }
 nav{
   font-size: calc(13px) ;
@@ -37,7 +45,7 @@ nav{
   font-family:"rascon" ;
   src: url(font/Rascon.woff);
 }
-.judul{
+.section-title{
   top: 10px;
   /* position: sticky; */
   font-family: rascon;
@@ -324,6 +332,9 @@ nav{
   color: rgb(201, 204, 245);
   margin-top: 1rem;
   text-shadow: 0 0 3px black;
+}
+.send{
+  font-family: rascon;
 }
 
 /* project start */

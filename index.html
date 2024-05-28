@@ -11,9 +11,15 @@
 
         <!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
 </head>
-<body transition="duration-1000" onload="scroll(0, 0)"><!--onload="scroll(0, 0)" -->
+<body ><!--onload="scroll(0, 0)" -->
+    <div id="loading" class="fixed size-full transiton-150">
+        <div class="loader m-auto flex content-center size-full bg-tema justify-center">
+            <img src="assets/Loading.gif" alt="" draggable="false" class="w-1/5 self-center animate-pulse">
+        </div>
+    </div>
+
+
     <!-- navbar start-->
-    <header id="home">
     <main class="overflow-none relative">
         <nav class="big">
             <div class="navDesktop  hidden md:flex md:space-center h-7 backdrop-blur-[2px]">
@@ -38,8 +44,8 @@
     <!-- akhir navbar -->
 
     <!-- hero start-->
-    <div class="background overflow-hidden">
-            <img class="her fixed mx-auto  w-96 top-60 sm:bottom-[] md:bottom-[10vw] lg:right-10 lg:top-28 xl:right-56 2xl:w-1/3 z-10" src="assets/super mario.png" alt="">
+    <div id="home" class="background overflow-hidden">
+            <img loading="lazy" class="her fixed mx-auto  w-96 top-60 sm:bottom-[] md:bottom-[10vw] lg:right-10 lg:top-28 xl:right-56 2xl:w-1/3 z-20" src="assets/super mario.png" alt="avatar">
 
             <div class="z-10 fixed  name max-w-sm mx-10 m-10 mt-[15vw] text-3xl font-semibold text-white sm:left-0 md:text-4xl  sm:max-w-xl sm:mx-16 md:mt-20 md:mr-[20vw] lg:ml-[9vw] lg:mr-[30vw] lg:mt-44 lg:max-w-lg lg:text-5xl xl:mt-48 xl:ml-[10vw] xl:mr-[40vw] 2xl:mr-[50vw] 2xl:max-w-2xl ">
                 <h2 class="lg:mb-2">Holla!...</h2>
@@ -52,103 +58,148 @@
         <a href="#about-me" class="z-900 lock-botton unlock animate-bounce duration-1000">
         <span class="center-lock"></span>
         </a>
-        
     </main>
     <!-- akhir hero -->
 
     <!-- about me start -->
-    <div id="about-me">
-    
-            <h1 class="judul scroll-element text-4xl  font-thin text-center
-             mb-4 pt-16  text-slate-200 m-10">&lt; WHO I AM /&gt;</h1>
-
-            <section class=" container max-w-4xl mx-auto  mt-10 p-10 xl:max-w-6xl xl:mx-auto lg:max-w-5xl lg:mx-4 lg:mx-auto md:max-w-3xl md:text-lg lg:text-xl sm:max-w-2xl 
-            shadow-2xl rounded-xl shadow-black">
+        <h1 id="about-me" class="section-title">&lt; WHO I AM /&gt;</h1>
+        <section  class=" container max-w-4xl mx-auto  mt-10 p-10 xl:max-w-6xl xl:mx-auto lg:max-w-5xl lg:mx-4 lg:mx-auto md:max-w-3xl md:text-lg lg:text-xl sm:max-w-2xl 
+        shadow-2xl rounded-xl shadow-black">
                 <img src="assets/astronotandrocket.svg" alt="" class="atro absolute invisible animate-bounce xl:size-1/4 xl:float-right md:float-right md:b-0 md:visible md:relative w-52 duration- animate-duration-3000 animate-delay-3000 animate-puse ">
                     <p class="mix-blend-plus-lighter  text-justify  first-line:tracking-widest">
                         <span class="text-4xl md:text-5xl lg:text-6xl float-left mr-4 font-bold">Hello,</span>My name is <span class=" underline">Muhammad Firmansyah,</span> 
                         I am from Riau,    Indonesia. I am 15 years old and currently a high school student. In addition to my studies, I am a tech enthusiast who enjoys keeping up with the latest technological developments such as computers, hardware, the Internet of Things (IoT), gadgets, and even Artificial Intelligence (AI).<br><br>
 
                         My interest in web development began early in my life, and I have invested countless hours in learning and honing my skills in this domain. Although I am still at the beginning of my journey in web development, I am determined to continue improving my knowledge and expertise. Through commitment, guidance from established professionals, and practising various programming languages, I have many reasons to believe that success is within reach. My keen interest in technology and web development, combined with my diligent dedication to absorb all that I can, gives me hope for what lies ahead.</p>
-                </section>
+            </section>
 
                 <!-- Skills -->
-                    <div class="skills">
-                        <h1 class="judul text-4xl font-thin text-center mb-4 pt-16 text-slate-200 m-10">&lt; TECHNOLOGY /&gt;</h1>
-                        
-                        <div class="flex flex-wrap justify-center gap-6 shadow-2xl shadow-black container m-auto w-max max-w-[90%] sm:px-4 sm:pt-4 sm:pb-5 p-2 rounded-2xl ">
-                         
-                            <label class="group icon-technology" for="css">
-                                <img class="icon-technology-img " src="assets/css.png" alt="" name="css">&lt; CSS /&gt;
-                            </label> 
-                                <label class="group icon-technology" for="html">
-                                <img class="icon-technology-img" src="assets/html.png" alt="" name="html">&lt; HTML /&gt;
-                            </label>
-                            <label class="group icon-technology" for="js">
-                                <img class="icon-technology-img" src="assets/javascript.png" alt="" name="js">&lt; JavaScript /&gt;
-                            </label>
-                                <label class="group icon-technology" for="git">
-                                <img class="icon-technology-img" src="assets/git.png" alt="">&lt; GIT /&gt;
-                            </label>
-                            <label class="group icon-technology" for="git">
-                                <img class="icon-technology-img" src="assets/github.png" alt="">&lt; GITHUB /&gt;  
-                            </label>
-                        </div>
-                    </div>
+    <div class="skills">
+        <h1 class="section-title">&lt; TECHNOLOGY /&gt;</h1>
+        
+        <div class="flex flex-wrap justify-center gap-6 shadow-2xl shadow-black container m-auto w-max max-w-[90%] sm:px-4 sm:pt-4 sm:pb-5 p-2 rounded-2xl ">
+            
+            <label class="group icon-technology" for="css">
+                <img class="icon-technology-img " src="assets/css.png" alt="" name="css">&lt; CSS /&gt;
+            </label> 
+                <label class="group icon-technology" for="html">
+                <img class="icon-technology-img" src="assets/html.png" alt="" name="html">&lt; HTML /&gt;
+            </label>
+            <label class="group icon-technology" for="js">
+                <img class="icon-technology-img" src="assets/javascript.png" alt="" name="js">&lt; JavaScript /&gt;
+            </label>
+                <label class="group icon-technology" for="git">
+                <img class="icon-technology-img" src="assets/git.png" alt="">&lt; GIT /&gt;
+            </label>
+            <label class="group icon-technology" for="git">
+                <img class="icon-technology-img" src="assets/github.png" alt="">&lt; GITHUB /&gt;  
+            </label>
+        </div>
+    </div>
         <!-- about me end -->
 
         <!-- project start -->
-        <section class="" id="project">
-            <h1 class="judul scroll-element  text-4xl font-thin text-center
-             mb-4 pt-16 text-slate-200 m-10">&lt; MY PROJECT /&gt;</h1>
-            <div class="project-container container sm:flex sm:justify-evenly sm:flex-wrap sm:w-[98%] gap-6 md:gap-3 xl:gap-5 h-7 h-max bg-slate-800/10 md:w-[98vw] m-auto p-5 pt-7 rounded-2xl shadow-black shadow-md">
+    <section class="" id="project">
+        <h1 class="section-title">&lt; MY PROJECT /&gt;</h1>
+        <div class="project-container container sm:flex sm:justify-evenly sm:flex-wrap sm:w-[98%] gap-6 md:gap-3 xl:gap-5 h-7 h-max bg-slate-800/10 md:w-[98vw] m-auto p-5 pt-7 rounded-2xl shadow-black shadow-md">
 
-                <div class="project-card group">
-                    <img src="project/porfolio.png" alt="" class="rounded-lg shadow-md shadow-white/80 brightness-90 group-hover:brightness-100">
-                    <div class="project-content px-3 pb-3 pt-1">
-                        <h1 class="text-center m-4 p-1 border-2 border-white/30 hover:bg-purple-950/80 transition-all rounded-2xl">Project Dummy 1</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, vero.</p>
-                    </div>
+            <div class="project-card group">
+                <img src="project/porfolio.png" alt="" class="rounded-lg shadow-md shadow-white/80 brightness-90 group-hover:brightness-100">
+                <div class="project-content px-3 pb-3 pt-1">
+                    <h1 class="text-center m-4 p-1 border-2 border-white/30 hover:bg-purple-950/80 transition-all rounded-2xl">Project Dummy 1</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, vero.</p>
                 </div>
-                <div class="project-card group">
-                    <img src="project/porfolio.png" alt="" class="rounded-lg shadow-md shadow-white/80 brightness-90 group-hover:brightness-100">
-                    <div class="project-content px-3 pb-3 pt-1">
-                        <h1 class="text-center m-4 p-1 border-2 border-white/30 hover:bg-purple-950/80 transition-all rounded-2xl">Project Dummy 1</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, vero.</p>
-                    </div>
+            </div>
+            <div class="project-card group">
+                <img src="project/porfolio.png" alt="" class="rounded-lg shadow-md shadow-white/80 brightness-90 group-hover:brightness-100">
+                <div class="project-content px-3 pb-3 pt-1">
+                    <h1 class="text-center m-4 p-1 border-2 border-white/30 hover:bg-purple-950/80 transition-all rounded-2xl">Project Dummy 1</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, vero.</p>
                 </div>
-                <div class="project-card group">
-                    <img src="project/porfolio.png" alt="" class="rounded-lg shadow-md shadow-white/80 brightness-90 group-hover:brightness-100">
-                    <div class="project-content px-3 pb-3 pt-1">
-                        <h1 class="text-center m-4 p-1 border-2 border-white/30 hover:bg-purple-950/80 transition-all rounded-2xl">Project Dummy 1</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, vero.</p>
-                    </div>
+            </div>
+            <div class="project-card group">
+                <img src="project/porfolio.png" alt="" class="rounded-lg shadow-md shadow-white/80 brightness-90 group-hover:brightness-100">
+                <div class="project-content px-3 pb-3 pt-1">
+                    <h1 class="text-center m-4 p-1 border-2 border-white/30 hover:bg-purple-950/80 transition-all rounded-2xl">Project Dummy 1</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, vero.</p>
                 </div>
-                <div class="project-card group">
-                    <img src="project/porfolio.png" alt="" class="rounded-lg shadow-md shadow-white/80 brightness-90 group-hover:brightness-100">
-                    <div class="project-content px-3 pb-3 pt-1">
-                        <h1 class="text-center m-4 p-1 border-2 border-white/30 hover:bg-purple-950/80 transition-all rounded-2xl">Project Dummy 1</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, vero.</p>
-                    </div>
+            </div>
+            <div class="project-card group">
+                <img src="project/porfolio.png" alt="" class="rounded-lg shadow-md shadow-white/80 brightness-90 group-hover:brightness-100">
+                <div class="project-content px-3 pb-3 pt-1">
+                    <h1 class="text-center m-4 p-1 border-2 border-white/30 hover:bg-purple-950/80 transition-all rounded-2xl">Project Dummy 1</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, vero.</p>
                 </div>
-                <div class="project-card group">
-                    <img src="project/porfolio.png" alt="" class="rounded-lg shadow-md shadow-white/80 brightness-90 group-hover:brightness-100">
-                    <div class="project-content px-3 pb-3 pt-1">
-                        <h1 class="text-center m-4 p-1 border-2 border-white/30 hover:bg-purple-950/80 transition-all rounded-2xl">Project Dummy 1</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, vero.</p>
-                    </div>
+            </div>
+            <div class="project-card group">
+                <img src="project/porfolio.png" alt="" class="rounded-lg shadow-md shadow-white/80 brightness-90 group-hover:brightness-100">
+                <div class="project-content px-3 pb-3 pt-1">
+                    <h1 class="text-center m-4 p-1 border-2 border-white/30 hover:bg-purple-950/80 transition-all rounded-2xl">Project Dummy 1</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, vero.</p>
                 </div>
-        
-            </div> 
-        </section>
+            </div>
+    
+        </div> 
+    </section>
         <!-- project end -->
         <!-- </main> -->
 
+        <!-- contact start -->
+    <section id="contact">
+        <h1 class="section-title">&lt; CONTACT ME /&gt;</h1>
+        <div class="max-w-2xl m-5 rounded-2xl flex mx-auto p-10 justify-center shadow-md shadow-white/30 bg-purple2/40">
+            <form action="" class="w-1/2">
+                <div class="">
+                    <label for="email" class="block"><span class="font-extrabold block mb-1 text-white font-serif after:content-['*'] after:text-red-800 after:ml-0.5 ">Email</span>
+                    <input type="email" id="email" placeholder="Enter your email..." class="w-full h-9 rounded-md bg-purple1 placeholder-white/70 px-3 py[5px] font-semibold focus:outline-none focus:ring-2 focus:border-gray-700/50 focus:ring-gray-800/50 invalid:text-red-500/85 invalid:focus:ring-red-950/45 invalid:focus:border-red-900 invalid:focus:shadow-red-800 valid:focus:ring-green-600 valid:focus:shadow-green-500 shadow-lg group-[input]">
+                    </label>
+                </div>
+                <div class="my-5">
+                    <label for="massage"><span class="ont-extrabold block mb-1 text-white font-extrabold font-serif">Massage</span>
+                        <textarea type="text" id="massage" rows="3" class="w-full rounded-md bg-purple1 placeholder-gray-400/20 p-2 overflow-y-hidden focus:outline-none focus:ring-2 focus:border-gray-700/50 focus:ring-red-900 valid:focus:ring-green-600 valid:focus:shadow-green-500 shadow-lg ">
+                        </textarea>
+                    </label>
+                </div>
+                <div class="flex justify-center">
+                    <button type="submit" class=" send rounded-full text-white/80 text-xl px-7 py-2 bg-purple2 ring-2 ring-white/60 hover:bg-purple1 hover:text-purple2 hover:ring-white/20 shadow-lg ">Send</button>
+                </div>
+            </form>
+        </div>
+    </section>
+        <!-- Contact end -->
+        <!-- Footer -->
+    <footer class="w-full h-32 bottom-0 bg-white mt-10 bg-purple3/20 flex justify-items-center place-content-center invisible flex-col">
+        <div>
+            <a href="https://www.instagram.com/firmansyah_748">
+            ss
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100080356868143">
+            sd
+            </a>
+            <a href="https://github.com/MhdFirmanSyah">
+            ds
+            </a>
+            <a href="https://www.instagram.com/firmansyah_748">
+            ds
+            </a>
+        </div>
+        <div> 
+            <a class="bar unlock" href="#home">Home</a>
+            <a class="bar unlock" href="#about-me" >About Me</a>
+            <a class="bar unlock" href="#project">My Project</a>
+            <a class="bar unlock" href="#contact">Contact</a>
+        </div>
+
+                
+        <div class="self-end bottom-0 bg-black w-full">
+            <p>Created BY <a href="">Muhammad FirmanSyah</a>. | &copy; 2024.</p>
+        </div>
+    </footer>
 
 
         
 
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
 </body>
 </html>

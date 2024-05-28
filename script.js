@@ -1,8 +1,27 @@
+
+// Loading animation
+window.addEventListener('load', () => {
+    const loading = document.querySelector('#loading');
+    loading.style.opacity = '0'
+    setTimeout(() => {
+        loading.style.display = 'none';
+    }, 1000);
+});
+
+let img = document.getElementsByTagName('img');
+Array.prototype.forEach.call(img, function(img) {
+    img.setAttribute('draggable', 'false');
+});
+
+// nav scroll hidden
 // window.onscroll = function(){
-//     if (window.pageYOffset > 50){
-//         document.querySelector("nav").style.top = "-100px";
-//     } else{
-//         document.querySelector("nav").style.top = "0";
+//     if (window.pageYOffset > 0){
+//         document.querySelector(".navDesktop").style.top = "-100px";
+//     } 
+//     else if(window.pageYOffset < 50){
+//         document.querySelector(".navDesktop").style.top = "0";
+//     }else{
+//         document.querySelector(".navDesktop").style.top = "0";
 //     }
 // }
 
@@ -22,19 +41,6 @@ unlock.forEach(function(element) {
     });
     
 });
-
-
-// function toggleScrool(enable){
-//     if (enable) {
-//         document.documentElement.style.overflowY = 'auto';
-//     }
-//     else {
-//         document.documentElement.style.overflowY = 'hidden';
-//     }
-// }
-
-
-
 
 
 //sidebar
@@ -60,38 +66,23 @@ const closeIcon = document.querySelector('.close-icon')
     });
 
 
-// Text scroll
-let scrollElement = document.querySelector('.scroll-element')
-console.log(scrollElement.pageYOffset)
-// window.addEventListener('scroll', function(){
-//     if(scrollElement.scrollTop === 10) {
-//     }
-// });
 
+// contact form
+const input = document.querySelector('div label input')
+const button = document.querySelector('div button')
+// button.style.display = 'none'
 
+input.addEventListener('input', function(event){
+    let regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-// //nightmode
-
-// const toggle = document.getElementById('darkModeToggle')
-
-
-// // toggle.addEventListener('change', (e) => {
-// //   document.documentElement.classList.toggle('dark', e.target.checked);
-// // });
-
-// toggle.addEventListener('change', (e) => {
-// document.documentElement.classList.toggle('dark', e.target.checked);
-
-// if (e.target.checked) {
-// localStorage.setItem('darkMode', 'true');
-// } else {
-// localStorage.removeItem('darkMode');
-// }
-// });
-
-// // Cek apakah 'darkMode' ada di localStorage ketika halaman dimuat
-// if (localStorage.getItem('darkMode')) {
-// toggle.checked = true;
-// document.documentElement.classList.add('dark');
-// }
-
+    if (regexEmail.test(input.value)) {
+        button.style.boxShadow = '0px 5px 20px rgb(0, 255, 0)'
+        button.style.color = ' rgb(0, 255, 0)'
+    } else if(input.value == '') {
+        button.style.boxShadow = 'none'
+        button.style.color = 'rgba(255, 255, 255, .8)'
+    } else {
+        button.style.boxShadow = '0px 5px 20px red'
+        button.style.color = 'red'
+    }
+});
