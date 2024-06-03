@@ -16,6 +16,9 @@
     .icon-technology-img{
         @apply mx-auto xl:size-28 lg:size-24 md:size-20 sm:size-16 size-12 group-hover:scale-110 group-hover:-translate-y-3
     }
+    .footer-list{
+        @apply hover:text-gray-500 hover:scale-110 transition 
+    }
 }
 @layer utilities{
     .text-shadow-white{
