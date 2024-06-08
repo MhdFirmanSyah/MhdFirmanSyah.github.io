@@ -16,8 +16,17 @@
     .icon-technology-img{
         @apply mx-auto xl:size-28 lg:size-24 md:size-20 sm:size-16 size-12 group-hover:scale-110 group-hover:-translate-y-3
     }
+    .footer{
+        @apply before:absolute before:content-[''] before:bg-purple1 before:w-full before:h-6 before:left-0 before:mb-[9.3rem] before:rounded-b-full
+    }
     .footer-list{
-        @apply hover:text-gray-500 hover:scale-110 transition 
+        @apply hover:text-purple1 hover:scale-110 transition 
+    }
+    .footer-social{
+        @apply text-sm flex flex-col justify-center text-center items-center gap-2
+    }
+    .footer-img{
+        @apply w-6 hover:scale-125 transition-all
     }
 }
 @layer utilities{
