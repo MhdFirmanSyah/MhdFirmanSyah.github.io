@@ -68,7 +68,7 @@
                 <img src="assets/astronotandrocket.svg" alt="" class="atro absolute invisible animate-bounce xl:size-1/4 xl:float-right md:float-right md:b-0 md:visible md:relative w-52 duration- animate-duration-3000 animate-delay-3000 animate-puse ">
                     <p class="mix-blend-plus-lighter  text-justify  first-line:tracking-widest">
                         <span class="text-4xl md:text-5xl lg:text-6xl float-left mr-4 font-bold">Hello,</span>My name is <span class=" underline">Muhammad Firmansyah,</span> 
-                        I am from Riau,    Indonesia. I am 15 years old and currently a high school student. In addition to my studies, I am a tech enthusiast who enjoys keeping up with the latest technological developments such as computers, hardware, the Internet of Things (IoT), gadgets, and even Artificial Intelligence (AI).<br><br>
+                        I am from Riau,    Indonesia. I am 16 years old and currently a high school student. In addition to my studies, I am a tech enthusiast who enjoys keeping up with the latest technological developments such as computers, hardware, the Internet of Things (IoT), gadgets, and even Artificial Intelligence (AI).<br><br>
 
                         My interest in web development began early in my life, and I have invested countless hours in learning and honing my skills in this domain. Although I am still at the beginning of my journey in web development, I am determined to continue improving my knowledge and expertise. Through commitment, guidance from established professionals, and practising various programming languages, I have many reasons to believe that success is within reach. My keen interest in technology and web development, combined with my diligent dedication to absorb all that I can, gives me hope for what lies ahead.</p>
             </section>
@@ -94,6 +94,12 @@
             <label class="group icon-technology" for="git">
                 <img class="icon-technology-img" src="assets/github.png" alt="">&lt; GITHUB /&gt;  
             </label>
+            <label class="group icon-technology" for="tailwind">
+                <img class="icon-technology-img" src="assets/tailwind.png" alt="">&lt;  TAILWIND CSS /&gt;  
+            </label>
+            <label class="group icon-technology" for="react">
+                <img class="icon-technology-img" src="assets/react.png" alt="">&lt; REACT JS /&gt;  
+            </label>
         </div>
     </div>
         <!-- about me end -->
@@ -117,6 +123,13 @@
                     <p class="text-center">Landing page for bengkalis island</p>
                 </div></a>
             </div>
+            <div class="project-card group"><a href="https://personal-notes-git-main-firman-syahs-projects-0fce67a9.vercel.app/" target="_blank">
+                <img src="project/personal notes.png" alt="" class="rounded-lg shadow-md shadow-white/80 brightness-90 group-hover:brightness-100">
+                <div class="project-content px-3 pb-3 pt-1">
+                    <h1 class="text-center m-4 p-1 border-2 border-white/30 hover:bg-purple-950/80 transition-all rounded-2xl">PERSONAL NOTES</h1>
+                    <p class="text-center">Personal Notes with Material UI</p>
+                </div></a>
+            </div>
         </div> 
     </section>
         <!-- project end -->
@@ -126,20 +139,24 @@
     <section id="contact">
         <h1 class="section-title">&lt; CONTACT ME /&gt;</h1>
         <div class="max-w-2xl m-5 rounded-2xl flex mx-auto p-10 justify-center shadow-md shadow-white/30 bg-purple2/40">
-            <form action="" class="w-1/2">
+            <form action="" name="submit-to-google-sheet" class="w-1/2">
+                <div>
+                    <p class="warning"></p>
+                    <p class="status" >Pesan Anda Sudah Terkirim</p>
+                </div>
                 <div class="">
                     <label for="email" class="block"><span class="font-extrabold block mb-1 text-white font-serif after:content-['*'] after:text-red-800 after:ml-0.5 ">Email</span>
-                    <input type="email" id="email" placeholder="Enter your email..." class="w-full h-9 rounded-md bg-purple1 placeholder-white/70 px-3 py[5px] font-semibold focus:outline-none focus:ring-2 focus:border-gray-700/50 focus:ring-gray-800/50 invalid:text-red-500/85 invalid:focus:ring-red-950/45 invalid:focus:border-red-900 invalid:focus:shadow-red-800 valid:focus:ring-green-600 valid:focus:shadow-green-500 shadow-lg group-[input]">
+                    <input type="email" name="email" id="email" placeholder="Enter your email..." class="w-full h-9 rounded-md bg-purple1 placeholder-white/70 px-3 py[5px] font-semibold focus:outline-none focus:ring-2 focus:border-gray-700/50 focus:ring-gray-800/50 invalid:text-red-500/85 invalid:focus:ring-red-950/45 invalid:focus:border-red-900 invalid:focus:shadow-red-800 valid:focus:ring-green-600 valid:focus:shadow-green-500 shadow-lg group-[input]">
                     </label>
                 </div>
                 <div class="my-5">
-                    <label for="massage"><span class="ont-extrabold block mb-1 text-white font-extrabold font-serif">Massage</span>
-                        <textarea type="text" id="massage" rows="3" class="w-full rounded-md bg-purple1 placeholder-gray-400/20 p-2 overflow-y-hidden focus:outline-none focus:ring-2 focus:border-gray-700/50 focus:ring-red-900 valid:focus:ring-green-600 valid:focus:shadow-green-500 shadow-lg ">
+                    <label for="massage"><span class="font-extrabold block mb-1 text-white font-extrabold font-serif">Massage</span>
+                        <textarea type="text" name="massage" id="massage" rows="3" class="w-full rounded-md bg-purple1 placeholder-gray-400/20 p-2 overflow-y-hidden focus:outline-none focus:ring-2 focus:border-gray-700/50 focus:ring-red-900 valid:focus:ring-green-600 valid:focus:shadow-green-500 shadow-lg ">
                         </textarea>
                     </label>
                 </div>
                 <div class="flex justify-center">
-                    <button type="submit" class=" send rounded-full text-white/80 text-xl px-7 py-2 bg-purple2 ring-2 ring-white/60 hover:bg-purple1 hover:text-purple2 hover:ring-white/20 shadow-lg ">Send</button>
+                    <button type="submit" class="send rounded-full text-white/80 text-xl px-7 py-2 bg-purple2 ring-2 ring-white/60 hover:bg-purple1 hover:text-purple2 hover:ring-white/20 shadow-lg ">Send</button>
                 </div>
             </form>
         </div>
